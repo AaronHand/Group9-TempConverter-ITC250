@@ -49,11 +49,12 @@ if($checkForm){
 
 /**
  * Switches on radio values
+ * @param $type
  * @param int $temp
  * @return null|string
  */
 
-function convert($type,$temp=0)
+function convert($type,$temp)
 {
     switch($type){
 
