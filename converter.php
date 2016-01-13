@@ -15,15 +15,15 @@
 
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-$input = $_POST['user-input'];
-$tempType = $_POST['temp'];
-$submission = $_POST['submit'];
-$checkForm = isset($submission) && is_numeric($input);
 
 
-if($checkForm){
+
+if(isset($_POST['submit']) && is_numeric($_POST['user-input'])){
+    $input = $_POST['user-input'];
+    $type = $_POST['temp'];
+
     echo "<pre>";
-    echo convert($tempType,$input);
+    echo convert();
     echo "</pre>";
 
 }else{
@@ -54,26 +54,27 @@ if($checkForm){
  * @return null|string
  */
 
-function convert($type,$temp)
+function convert()
 {
+    global $type,$temp,$input;
     switch($type){
 
         case 'Fahrenheit':
-            $degF = $temp;
+            $degF = $input;
             $degC = number_format(($temp - 32) * 5/9,2);
             $degK = number_format(($temp + 459.67) * 5/9,2);
             break;
 
         case 'Celcius':
             $degF = number_format($temp * 9/5 + 32,2);
-            $degC = $temp;
+            $degC = $input;
             $degK = number_format($temp + 273.15,2);
             break;
 
         case 'Kelvin':
             $degF = number_format($temp * 9/5 -459.67,2);
             $degC = number_format($temp - 273.15,2);
-            $degK = $temp;
+            $degK = $input;
             break;
 
         default:
