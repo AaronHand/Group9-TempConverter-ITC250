@@ -7,19 +7,7 @@
  */
 
 
-
-/**
- *  THIS_PAGE constant
- */
-
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
-
-
-
-
-/**
- * If form has content do something, else show form
- */
 
 
 if(isset($_POST['submit']) && is_numeric($_POST['user-input']))
@@ -36,11 +24,16 @@ if(isset($_POST['submit']) && is_numeric($_POST['user-input']))
         <label>Fahrenheit </label><input type="radio" name="temp" value="Fahrenheit" checked><br>
         <label>Celcius </label><input type="radio" name="temp" value="Celcius"><br>
         <label>Kelvin </label><input type="radio" name="temp" value="Kelvin"><br>
-        <input type="submit" name="submit" value="Submit!">
+        <input type="submit" name="submit" value="Convert!">
     </form>
     ';
 }
 
+
+/**
+ * @param int $temp
+ * @return null|string
+ */
 
 function convert($temp=0){
     switch($_POST['temp']){
