@@ -14,11 +14,10 @@
 
 
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
+
 $input = $_POST['user-input'];
 $tempType = $_POST['temp'];
 $submission = $_POST['submit'];
-
-
 $checkForm = isset($submission) && is_numeric($input);
 
 
