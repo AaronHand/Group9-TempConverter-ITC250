@@ -8,7 +8,7 @@
  * File: converter.php
  *
  * Description: Simple temperature conversion app that will convert
- * * to or from Celcius, Fahrenheit, or Kelvin.
+ * * to or from Celsius, Fahrenheit, or Kelvin.
  *
  * TODO: Error handling, styles.
  *
@@ -38,8 +38,8 @@ if(isset($_POST['submit']) && is_numeric($_POST['user-input'])){
         <label>Fahrenheit</label>
         <input type="radio" name="type" value="Fahrenheit" checked><br>
 
-        <label>Celcius</label>
-        <input type="radio" name="type" value="Celcius"><br>
+        <label>Celsius</label>
+        <input type="radio" name="type" value="Celsius"><br>
 
         <label>Kelvin</label>
         <input type="radio" name="type" value="Kelvin"><br>
@@ -68,7 +68,7 @@ function convert()
             $degK = number_format(($input + 459.67) * 5/9,2);
             break;
 
-        case 'Celcius':
+        case 'Celsius':
             $degF = number_format($input * 9/5 + 32,2);
             $degC = $input;
             $degK = number_format($input + 273.15,2);
@@ -85,7 +85,7 @@ function convert()
     }
     return "
         Fahrenheit: $degF
-        Celcius:    $degC
+        Celsius:    $degC
         Kelvin:     $degK
     ";
 }
