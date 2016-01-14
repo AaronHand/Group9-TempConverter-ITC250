@@ -36,18 +36,18 @@ $form = '
     ';
 
 $formIsSet = isset($_POST['submit']);
-$inputIsNumeric = is_numeric($_POST['user-input']);
 
 
 if($formIsSet){
     $input = $_POST['user-input'];
     $type = $_POST['type'];
-    if($inputIsNumeric) {
+    if(is_numeric($_POST['user-input'])) {
         echo "<pre>";
         echo convert();
         echo "</pre>";
     }else {
-        $form .= '<h2>Erroneous Input, Please Resubmit.</h2>';
+        $form .= '<h4>Erroneous Input, Please Resubmit.</h4>';
+        echo $form;
     }
 
 }else{
