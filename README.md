@@ -1,13 +1,14 @@
 
 
-## Temperature Conversion Web App
+# Temperature Conversion Web App
 
 This is a group project for ITC250 at Seattle Central College
 
 
-* please add names here
+* Jenn Lockett
+* Tom Karchesy
 * Aaron Hand
 
 
 ##Description
-Just a simple app using _POST to do stuff. Feel free to add to description.
+Just a simple app using _POST to do stuff.
