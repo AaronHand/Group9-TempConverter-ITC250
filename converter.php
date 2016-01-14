@@ -38,6 +38,13 @@ $form = '
 $formIsSet = isset($_POST['submit']);
 
 
+/**
+ *
+ * there should probably be a checkForm() function, this is a little sloppy.
+ *
+ */
+
+
 if($formIsSet){
     $input = $_POST['user-input'];
     $type = $_POST['type'];
