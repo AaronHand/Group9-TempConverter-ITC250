@@ -2,7 +2,7 @@
 
 /**
  * Created by PhpStorm.
- * Users: Tom Karchesky, Jenn Lockett (?), Aaron Hand
+ * Users: Tom Karchesky, Jen Lockett , Aaron Hand
  * Date: 1/12/16
  * Time: 5:10 PM
  * File: converter.php
@@ -10,7 +10,7 @@
  * Description: Simple temperature conversion app that will convert
  * * to or from Celsius, Fahrenheit, or Kelvin.
  *
- * TODO: Error handling, styles.
+ * TODO: Error handling, styles, redo the error message, visual display function - handle dumping form + append.
  *
  */
 
