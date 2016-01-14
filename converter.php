@@ -17,20 +17,7 @@
 
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-
-
-
-if(isset($_POST['submit']) && is_numeric($_POST['user-input'])){
-    $input = $_POST['user-input'];
-    $type = $_POST['type'];
-
-
-    echo "<pre>";
-    echo convert();
-    echo "</pre>";
-
-}else{
-    echo '
+$form = '
     <form method="post" action="' . THIS_PAGE . '">
 
         <input type="text" name="user-input"><br>
@@ -47,6 +34,24 @@ if(isset($_POST['submit']) && is_numeric($_POST['user-input'])){
         <input type="submit" name="submit" value="Convert!">
     </form>
     ';
+
+$formIsSet = isset($_POST['submit']);
+$inputIsNumeric = is_numeric($_POST['user-input']);
+
+
+if($formIsSet){
+    $input = $_POST['user-input'];
+    $type = $_POST['type'];
+    if($inputIsNumeric) {
+        echo "<pre>";
+        echo convert();
+        echo "</pre>";
+    }else {
+        $form .= '<h2>Erroneous Input, Please Resubmit.</h2>';
+    }
+
+}else{
+    echo $form;
 }
 
 
