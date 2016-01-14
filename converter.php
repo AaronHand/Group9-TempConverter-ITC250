@@ -52,9 +52,9 @@ if(isset($_POST['submit']) && is_numeric($_POST['user-input'])){
 
 /**
  * Switches on radio values
- * @param $type
- * @param int $temp
  * @return null|string
+ * @internal param $type
+ * @internal param int $temp
  */
 
 function convert()
