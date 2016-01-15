@@ -73,21 +73,21 @@ function convert($input)
     switch ($_POST['type']) {
 
         case 'Fahrenheit':
-            $degF = $input;
+            $degF = number_format($input,2);
             $degC = number_format(($input - 32) * 5/9, 2);
             $degK = number_format(($input + 459.67) * 5/9, 2);
             break;
 
         case 'Celsius':
             $degF = number_format($input * 9/5 + 32, 2);
-            $degC = $input;
+            $degC = number_format($input,2);
             $degK = number_format($input + 273.15, 2);
             break;
 
         case 'Kelvin':
             $degF = number_format($input * 9/5 -459.67, 2);
             $degC = number_format($input - 273.15, 2);
-            $degK = $input;
+            $degK = number_format($input,2);
             break;
 
         default:
