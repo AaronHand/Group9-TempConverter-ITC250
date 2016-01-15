@@ -35,7 +35,7 @@ define('THIS_FORM', '
 
         <input type="submit" name="submit" value="Convert!">
     </form>
-    ');
+    ');//end-form
 
 $formIsSet = isset($_POST['submit']);
 display($formIsSet?checkForm($_POST['user-input']):'');
@@ -68,7 +68,6 @@ function display($message)
  * @internal param $type
  * @internal param int $temp
  */
-
 function convert($input)
 {
     switch ($_POST['type']) {
@@ -102,4 +101,4 @@ function convert($input)
             <tr><td>Kelvin: </td><td>$degK</td></tr>
         </table>
 TABLE;
-}
+}//end convert()
