@@ -10,7 +10,7 @@
  * Description: Simple temperature conversion app that will convert
  * * to or from Celsius, Fahrenheit, or Kelvin.
  *
- * TODO: Error handling, styles, redo the error message, visual display function - handle dumping form + append.
+ * TODO: Styles
  *
  */
 
