@@ -17,7 +17,7 @@
 
 define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
 
-$form = '
+define(FORM = '
     <form method="post" action="' . THIS_PAGE . '">
 
         <input type="text" name="user-input"><br>
@@ -33,14 +33,17 @@ $form = '
 
         <input type="submit" name="submit" value="Convert!">
     </form>
-    ';
+    ');
 
 $formIsSet = isset($_POST['submit']);
 
 
 /**
  *
- * there should probably be a checkForm() function, this is a little sloppy.
+ * display function?  
+ * 
+ * inputs: message (default=null,'please enter a temperature','error')
+ * outputs: form + message
  *
  */
 
