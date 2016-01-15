@@ -15,9 +15,10 @@
  */
 
 
-define('THIS_PAGE',basename($_SERVER['PHP_SELF']));
+define('THIS_PAGE', basename($_SERVER['PHP_SELF']));
+define('USER_ERROR', 'Erroneous Input, Please try again.');
 
-define(FORM = '
+define('THIS_FORM', '
     <form method="post" action="' . THIS_PAGE . '">
 
         <input type="text" name="user-input"><br>
@@ -36,34 +37,28 @@ define(FORM = '
     ');
 
 $formIsSet = isset($_POST['submit']);
+display($formIsSet?checkForm($_POST['user-input']):'');
 
 
 /**
- *
- * display function?  
- * 
- * inputs: message (default=null,'please enter a temperature','error')
- * outputs: form + message
- *
+ * check if input is valid. If so perform conversion
+ * *if not, return error
+ * @param $userInput
+ * @return null|string
  */
-
-
-if($formIsSet){
-    $input = $_POST['user-input'];
-    $type = $_POST['type'];
-    if(is_numeric($_POST['user-input'])) {
-        echo "<pre>";
-        echo convert();
-        echo "</pre>";
-    }else {
-        $form .= '<h4>Erroneous Input, Please Resubmit.</h4>';
-        echo $form;
-    }
-
-}else{
-    echo $form;
+function checkForm($userInput)
+{
+    return(is_numeric($userInput))?convert($userInput):USER_ERROR;
 }
 
+/**
+ * Display form + result content (error, table)
+ * @param $message
+ */
+function display($message)
+{
+    echo THIS_FORM . $message;
+}
 
 /**
  * Switches on radio values
@@ -72,36 +67,37 @@ if($formIsSet){
  * @internal param int $temp
  */
 
-function convert()
+function convert($input)
 {
-    global $type,$input;
-    switch($type){
+    switch ($_POST['type']) {
 
         case 'Fahrenheit':
             $degF = $input;
-            $degC = number_format(($input - 32) * 5/9,2);
-            $degK = number_format(($input + 459.67) * 5/9,2);
+            $degC = number_format(($input - 32) * 5/9, 2);
+            $degK = number_format(($input + 459.67) * 5/9, 2);
             break;
 
         case 'Celsius':
-            $degF = number_format($input * 9/5 + 32,2);
+            $degF = number_format($input * 9/5 + 32, 2);
             $degC = $input;
-            $degK = number_format($input + 273.15,2);
+            $degK = number_format($input + 273.15, 2);
             break;
 
         case 'Kelvin':
-            $degF = number_format($input * 9/5 -459.67,2);
-            $degC = number_format($input - 273.15,2);
+            $degF = number_format($input * 9/5 -459.67, 2);
+            $degC = number_format($input - 273.15, 2);
             $degK = $input;
             break;
 
         default:
             return "Erroneous Input.";
     }
-    return "
-        Fahrenheit: $degF
-        Celsius:    $degC
-        Kelvin:     $degK
-    ";
+    return
+        <<<TABLE
+        <table>
+            <tr><td>Fahrenheit: </td><td>$degF</td></tr>
+            <tr><td>Celsius: </td><td>$degC</td></tr>
+            <tr><td>Kelvin: </td><td>$degK</td></tr>
+        </table>
+TABLE;
 }
-
