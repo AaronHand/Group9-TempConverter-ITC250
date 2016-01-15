@@ -62,6 +62,7 @@ function display($message)
 
 /**
  * Switches on radio values
+ * @param $input
  * @return null|string
  * @internal param $type
  * @internal param int $temp
