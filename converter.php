@@ -22,7 +22,7 @@ define('USER_ERROR', 'Erroneous Input, Please try again.');
 define('THIS_FORM', '
     <form method="post" action="' . THIS_PAGE . '">
 
-        <input type="text" name="user-input"><br>
+        <input type="text" name="user-input" autocomplete="off"><br>
 
         <label>Fahrenheit</label>
         <input type="radio" name="type" value="Fahrenheit" checked><br>
