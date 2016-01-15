@@ -5,7 +5,7 @@
 This is a group project for ITC250 at Seattle Central College
 
 
-* Jenn Lockett
+* Jen Lockett
 * Tom Karchesy
 * Aaron Hand
 
