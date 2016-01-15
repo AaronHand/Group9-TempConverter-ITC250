@@ -52,7 +52,7 @@ function checkForm($userInput)
 }
 
 /**
- * Display form + result content (error, table)
+ * Display form + message content (error, table)
  * @param $message
  */
 function display($message)
