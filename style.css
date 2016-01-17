@@ -11,19 +11,32 @@ body {
 }
 
 #wrapper  {
-	width:940px;
-	margin:0 auto;
+    width:940px;
+    margin:0 auto;
     overflow:hidden;
 }
 
+main   {
+    width:50%;
+    float:right;
+    border:5px #F4E9CA solid;
+    clear:both;
+    text-align: center;
+}
+
+table {
+    margin-left:auto; 
+    margin-right:auto;    
+}
+
 form   {
-	padding-top:20px;
+    padding-top:20px;
 }
 
 label   {
-	display:block;
-	padding-top:12px;
-	padding-bottom:6px;
+    display:block;
+    padding-top:12px;
+    padding-bottom:6px;
 }
 
 input[type=text], input[type=], input[type=], input[type=]   {
@@ -42,9 +55,11 @@ input[type=submit]   {
 	color:#696048;
 	background-color:#FFF7E2;
 	font-weight:bold;
-	font-size:100%;
+	font-size:90%;
 	font-variant:small-caps;
 	border-radius:8px;
 	width:20%;
 	border:3px #696048 solid;
+	margin-top: 25px;
+        margin-bottom: 15px;
 }
