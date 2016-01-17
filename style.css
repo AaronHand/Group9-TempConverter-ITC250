@@ -3,3 +3,64 @@
 table td:nth-child(2){
     text-align: right;
 }
+/* Form styles here */
+
+form   {
+	padding-top:12px;
+}
+
+form p   {
+	padding:0;
+	margin:0;
+	line-height:1.3;
+}
+
+form legend   {
+	font-size:1.5em;
+	font-family:'verdana', sans-serif;
+	font-weight:inherit;
+	line-height:1.2;
+	color:#696048;
+}
+
+fieldset   {
+	padding:0 0 17px 17px;
+}
+
+label   {
+	display:block;
+	padding-top:12px;
+	padding-bottom:6px;
+}
+
+
+input[type=], input[type=], input[type=], input[type=], textarea   {
+	width:92%;
+	border:2px solid #a89a73;
+	margin-top:14px;
+	font-family:'Gudea', sans-serif;
+	font-size:1em;
+}
+
+input[type=text], input[type=], input[type=], input[type=]   {
+	height:20px;
+}
+
+input[type=checkbox]   {
+	margin-right:6px;
+}
+
+textarea   {
+	margin-bottom:12px;
+}
+
+input[type=submit]   {
+	color:#696048;
+	background-color:#FFF7E2;
+	font-weight:bold;
+	font-size:100%;
+	font-variant:small-caps;
+	border-radius:8px;
+	width:33%;
+	border:3px #696048 solid;
+}
