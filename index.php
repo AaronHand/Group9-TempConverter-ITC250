@@ -5,9 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+<div id="wrapper">
+    <main>
 
 <?php include 'converter.php'; ?>
-
+</main>
+</div>
 </body>
 </html>
