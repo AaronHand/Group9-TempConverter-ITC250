@@ -3,7 +3,18 @@
 table td:nth-child(2){
     text-align: right;
 }
+
 /* Form styles here */
+
+body {
+     line-height: inherit;
+}
+
+#wrapper  {
+	width:940px;
+	margin:0 auto;
+    overflow:hidden;
+}
 
 form   {
 	padding-top:12px;
