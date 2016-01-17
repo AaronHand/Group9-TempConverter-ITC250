@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>P1: Temperature Conversion</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
