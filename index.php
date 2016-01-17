@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>P1: Temperature Conversion</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-<div id="wrapper">
-    <main>
-
-<?php include 'converter.php'; ?>
-</main>
-</div>
-</body>
-</html>
+<?php include 'header.php';?>
+					<h1>Page ID</h1>
+					<h2>H2 content</h2>
+					<p>Clever Content goes here.</p>
+					<h2>H2 content</h2>
+					<p>Clever Content goes here.</p>
+					<h2>H2 content</h2>
+					<p>Clever Content goes here.</p>
+<?php include 'footer.php';?>
